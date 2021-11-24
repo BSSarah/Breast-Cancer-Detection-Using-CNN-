@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>
+         Breast Tumor Detection 
+     </title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+ <body>
+     <img src="./Img/2.png">
+     <h1 class="text-center">Mammogram Images classifier</h1>
+     <form class="p-3 text-center" action='/', method="post" enctype="multipart/form-data">
+       <input class="form-control" type="file" name="imagefile">
+       <input class="btn btn-primary mt-3" type="submit" value="Predict Image">
+    </form>
+
+    {% if prediction %}
+     <p class="text-center">The mammography is {{prediction}} {{percentage}}%</p>
+    {% endif %}
+     
+ </body>
+</html>
